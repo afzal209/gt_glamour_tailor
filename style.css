@@ -1,0 +1,449 @@
+@font-face {
+    font-family: 'JameelNooriNastaleeq';
+    src: url('urdu/JameelNooriNastaleeq.ttf') format('truetype');
+}
+
+
+.cust > * {line-height: 8px;}
+
+.cust h1 {
+    font-size: 100%;
+}
+.cust h3{
+    font-size: 100%;
+}
+.cust p{
+    font-size: 58%;
+}
+
+form#form-submit > div:not(.cust) >div {display: flex;/* width: 8%; */flex-wrap: wrap;justify-content: space-around;}
+
+.mb-3.col-md-1 {}
+
+form#form-submit > div >div > label {
+text-align: center;
+}
+
+.row>* {
+position: relative
+}
+
+.row>* {-ms-flex-negative: 0;padding-right: calc(var(1.25rem)/ 2);padding-left: calc(var(1.25rem)/ 2);width: 100%;/* flex-shrink: 0; */width: 100%;max-width: 100%;width: 100%;}
+
+
+.col-md-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 8.33333%
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .47rem .75rem;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out
+}
+tbody,td,tfoot,th,thead,tr {border-color: inherit;border-style: solid;border-color: #0000003d;border: 1px solid #0000003d;}
+td.col-md-9 >:not(caption)>*>* {  border: 1px solid #0000003d;
+        /* border: 1px solid #0000003d; */
+        border: 1px solid #0000003d;
+    
+        border-color: #0000003d;
+        border-bottom: 1px solid #0000003d;
+    }
+
+    .table>:not(caption)>*>*>input {
+        border: 0;
+        border-bottom: 1px solid #d3d8de;
+    }
+
+
+    .table .form-control{
+        border : 0;
+        font-size: 12px;
+        padding: 9px;
+        height: 2.3rem;
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .table th h3{
+        font-size: 19px;
+        text-align: right;
+        font-family: 'DejaVuSans';
+    }
+
+    .form-control {
+        padding:  8px;
+        border-radius: 0;
+        font-size: 17px;
+        font-family: inherit;
+    }
+
+    label h5 {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    label h3 {
+        font-size: 20px;
+        margin: 15px 0 2px 0;
+        font-family: fantasy;
+    }
+
+    label {
+        width: 100%;
+        margin: 0px 0px 7px 0;
+    }
+
+    .sec2 label {
+        text-align: right;
+    }
+    .sec2 label img {
+        width: 90%;
+        height: 3.1rem;
+    }
+
+table th {
+    padding: 0 1rem;
+}
+
+.bill {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bill >div {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+
+.sec3 table .col-md-1 {
+    width: 20%;
+}
+
+.sec1 input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.sec1>div {
+    margin: 0 15px;
+}
+
+.container{
+    padding:0 20px;
+}
+
+.pejama > p {
+    position: absolute;
+    top: 29%;
+    left: 23%;
+}
+
+.pejama .p1 {
+    top: 46%;
+}
+
+.pejama .p2 {
+    left: 41%;
+}
+
+.pejama .p3 {
+    left: 54%;
+    top: 34%;
+}
+
+@font-face {
+    font-family: 'JameelNooriNastaleeq';
+    src: url('urdu/JameelNooriNastaleeq.ttf') format('truetype');
+}
+form#form-submit > div:not(.cust , .pejama) {display: flex;/* width: 100%; */}
+
+form#form-submit > div:not(.cust , .pejama , .sec2) >div {display: flex;}
+
+.mb-3.col-md-1 {}
+
+form#form-submit > div >div > label {text-align: center;margin: 8px 0px 4px 0;}
+
+.row>* {
+position: relative
+}
+
+.row>* {-ms-flex-negative: 0;padding-right: calc(var(1.25rem)/ 2);padding-left: calc(var(1.25rem)/ 2);width: 100%;/* flex-shrink: 0; */width: 100%;max-width: 100%;width: 100%;}
+
+
+.col-md-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 8.33333%
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .47rem .75rem;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out
+}
+tbody,td,tfoot,th,thead,tr {border-color: inherit;border-style: solid;border-color: #000000;border: 2px solid #000000;margin: 0;padding: 0px;border-left: 0px !important;border-bottom: 0px;}
+td.col-md-9 >:not(caption)>*>* {  border: 1px solid #0000003d;
+        /* border: 1px solid #0000003d; */
+        border: 1px solid #0000003d;
+    
+        border-color: #0000003d;
+        border-bottom: 1px solid #0000003d;
+    }
+
+    .table>:not(caption)>*>*>input {
+        border: 0;
+        border-bottom: 1px solid #d3d8de;
+    }
+
+
+    .table .form-control{
+        border : 0;
+        font-size: 12px;
+        padding: 9px;
+        height: 2.3rem;
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .table th h3{
+        font-size: 18px;
+        text-align: right;
+        font-family: 'DejaVuSans';
+        margin: 0;
+    }
+
+    .form-control {
+        padding: 0;
+        border-radius: 0;
+        font-size: 16px;
+        font-family: inherit;
+        height: 1.5rem;
+        text-align: -webkit-center;
+        text-align: center;
+        border-color: black;
+        border: 2px solid black;
+    }
+
+    label h5 {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    label h3 {
+        font-size: 19px;
+        margin: 0;
+        font-family: fantasy;
+    }
+
+    label {
+        width: 100%;
+        margin: 0px 0px 7px 0;
+    }
+
+    .sec2 label {
+        text-align: right;
+    }
+    .sec2 label img {
+        width: 90%;
+        height: 3.1rem;
+    }
+    .sec2 >div {
+    }
+
+table th {
+    padding: 0 1rem;
+}
+
+.bill {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bill >div {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+}
+
+.sec3 table .col-md-1 {
+    width: 4%;
+    text-align: center;
+}
+
+.sec1 input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.sec1>div {
+    margin: 0 15px;
+}
+
+.container{
+    padding:0 20px;
+}
+
+.pejama{
+    position: absolute;
+    top: 32.5%;
+    border: 1px solid;
+    width: 65%;
+    background: #ffff;
+    left: 2px;
+    padding-bottom: 6rem;
+    padding-top: 2rem;
+}
+
+.pejama > p {
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    border: 1px solid;
+    padding: 10px;
+    width: 18%;
+    text-align: center;
+}
+
+.pejama .p1 {
+    top: 15%;
+}
+
+.pejama .p2 {
+    left: 58%;
+    top: 40%;
+}
+
+.pejama .p3 {
+    left: 58%;
+    top: 21%;
+}
+
+.pejama img {
+    width: 90%;
+    background-color: #ffff;
+    height: 12rem;
+}
+
+.cust{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    height: 5rem;
+}
+
+.row.cust div:nth-child(3) {
+    text-align: right;
+}
+
+p.p4 {
+    left: 78%;
+    top: 61%;
+    border: 0;
+    width: 10%;
+}
+
+p.p5 {
+    left: 61%;
+    top: 73%;
+}
+
+p.p6 {
+    left: 37%;
+    top: 73%;
+}
+
+.p5 {
+    top: 73%;
+}
+/* .logo  {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+} */
+.logo {
+    width: 11%;
+}
+
+table td p {
+    margin: 7px;
+    font-size:20px;
+}
+
+.sec3 tr > td:nth-child(1) {
+    width: 30%;
+    border-left: 2px solid black !important;
+}
+
+.sec3 tr > td {
+    padding: 6px;
+}
+
+.sec3 tr > td:nth-child(4) {
+    width: 50%;
+}
+
+.billing tr > :nth-child(1) {
+    width: 10%;
+    border-left: 2px solid black !important;
+}
+
+.billing tr >td , .billing tr >th {
+    font-size: 11px;
+    padding: 0.4rem;
+}
+
+
+.bill h2 {
+    font-size: 0.9rem;
+    margin: 6px 0;
+}
+
+.pejama > .p7 {
+    border: 0;
+    width: 4%;
+    left: 0%;
+    top: 64%;
+}
+
+.dual input {
+    width: 42.8%;
+    padding: 0;
+    text-align: center;
+}

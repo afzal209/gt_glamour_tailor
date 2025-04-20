@@ -1,0 +1,132 @@
+
+.earning_text h3 {
+    font-size: 2pc;
+    position: relative;
+    bottom: 16px;
+    right: 16px;
+    /* border-radius: 0pc 0px 1pc 0pc; */
+    color: #ffffff;
+    padding: 5px 0px 4px 9px;
+    margin: 0px;
+    width: 100%;
+    background-color: #1e1e2c;
+}
+
+.earning_heading h4 {
+    font-size: 1.7pc;
+    margin: 0px;
+    text-transform: uppercase;
+    /* color: white; */
+    box-shadow: inset 0px 0px 6px 2px white;
+    padding: 10px;
+    text-align: center;
+    /* background: #F29F67; */
+}
+
+@media (max-width: 992px){}
+.earning_text h3 {
+    font-size: 2.4pc !important;
+}
+
+.card-header .box1 {
+    background-color: black;
+}
+
+.box-d1 .card-header {/* background-color: #ffa500; */background-image: linear-gradient(to right, rgb(83 83 83 / 75%), #ffa500);}
+
+.box-d1 .card-header .text-white {
+    color: #fff;
+}
+
+.earning_box {
+    /* background-color: #b3b3b3; */
+    /* border-bottom-right-radius: 40px; */
+    border: 1px solid gray;
+}
+
+i.fa-calculator {
+    font-size: 3pc;
+    color: #F29F67;
+}
+
+
+.col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12.time {
+    padding: 15px;
+}
+
+.time h4 {
+    color: black;
+    font-size: 13px;
+    text-align: right;
+    padding: 7px 12px;
+    font-weight: bold;
+}
+
+.col-xl-12.col-lg-12.col-md-12.col-sm-12.col-12.head {
+    margin: 0;
+    padding: 0;
+}
+
+.time {
+    background-color: #c5c4c475;
+    /* color: black; */
+    border-radius: 0px 0px 10px 10px;
+    /* border-top: 1px solid white; */
+    box-shadow: 0 0 4px 0px;
+}
+
+.earning_heading {
+    /* background: linear-gradient(196deg, #5b73e8, #5b73e8); */
+    margin: 10px 0px;
+    padding: 1px;
+    color: black;
+}
+
+.col-xs-12.col-lg-12.col-md-12.col-sm-12.details {
+    padding: 0;
+}
+
+.earning_text p {
+     color: #1e2943!important;
+     width: 100%;
+     text-align: center;
+     font-size: 18px;
+     margin: 11px;
+     font-weight: bold;
+}
+
+.dashboard_sec2 .card-title {
+    font-size: 24px;
+    font-family: 'IBM Plex Sans';
+    font-weight: 600;
+    padding: 15px;
+    color: #ffffff;
+    box-shadow: 3px 3px 5px #8e8e8e;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #5b73e8;
+}
+.dashboard_sec2 .table {
+font-size: 18px;
+}
+
+.dashboard_sec2 td.pt-4.pb-4.text-right.font-weight-bold.col2 {
+    font-size: 20px;
+}
+.dashboard_sec2 td.pt-4.pb-4.text-right.font-weight-bold.col2 {
+    font-size: 20px;
+}
+
+
+.breadcrumb * {
+    color: #fff !important;
+}
+
+span.logo-lg img {
+    width: 80%;
+    height: auto;
+}
+.calculate_icon{
+    justify-content: center;
+    display: flex;
+}

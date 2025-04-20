@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate PDF from AJAX</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <button id="generate-pdf">Generate PDF</button>
+
+    <script>
+        document.getElementById('generate-pdf').addEventListener('click', function () {
+            generatePDF()
+        });
+        
+        function generatePDF() {
+            $.ajax({
+                url: 'testhtml.php',
+                method: 'GET',
+                success: function (response) {
+                    const element = document.createElement('div');
+                    element.innerHTML = response; // Inject the HTML content
+                    document.body.appendChild(element);
+
+                    html2pdf().from(element).set({
+                        margin: 1,
+                        filename: 'output.pdf',
+                        html2canvas: { scale: window.devicePixelRatio || 2 },
+                        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                    }).save();
+
+                    document.body.removeChild(element); // Clean up after generating the PDF
+                },
+                error: function (err) {
+                    console.error('Error fetching HTML:', err);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
