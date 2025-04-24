@@ -22,7 +22,7 @@ class activity{
   
   public $user_name;
   public $user_id;
-  public $url = '/';
+  public $url = '/gt_glamour_tailor/';
   public $title;
 
 
@@ -114,7 +114,7 @@ class activity{
       
       $formid = $id['XfsadrtTTSd2'];
       $query = $this->qu->query("SELECT COUNT(nic.id) as fnum, inf.* FROM `in_form` as inf 
-      LEFT JOIN form_nic as nic on nic.customer_num = inf.id WHERE inf.url = '$formid' And inf.is_block = 1");
+      LEFT JOIN form_nic as nic on nic.nic = inf.id WHERE inf.url = '$formid' And inf.is_block = 1");
     
       if(mysqli_num_rows($query) <= 0){
           return 'Exam form submission date has expired. Please wait for the next enrollment period.';

@@ -19,6 +19,7 @@
       body {font-family: 'DejaVu Sans', sans-serif;}
     </style>
     <?php $form_id = $db->formlimit($_GET);
+    // print_r($form_id);
       if(!is_int($form_id)){?>
         <div class="container " >
             <div class="mt-4 p-5 col-md-6 bg-light rounded" style="margin:auto">
@@ -120,10 +121,12 @@
                 <div class="col-md-12 col-lg-12 col-xl-12">
                     <div class="card">
                         <div class="card-body "> 
-                            <form class="custom-validation row" method='POST' action='testhtml.php' target="_blank" >
+                            <form class="custom-validation row"  id="form-submit" >
                                 <input type="text" hidden name='form_id' id="form_id" value='<?=$form_id;?>'>
                                 <input type="text" hidden name='form_action' id='form_action' value='view'>
                                 <input type="text" hidden name='bill_num' id='title' value='<?=$exam_name.' - '.$location;?>'>
+                                <input type="hidden"  name="customer_id" id="customer_id" value="">
+                                <input type="text" hidden name='bill' id='bill' value='001'>
 
                                 <div class="row">
                                     <div class="mb-3 col-md-2 row">
@@ -133,7 +136,19 @@
 
                                     <div class="mb-3 col-md-6">
                                         <label for=""><h5>Name Of Customer</h5></label>
-                                        <input type="text" name='cu' class="form-control"/>
+                                        <!-- <input type="text" name='cu' class="form-control"/> -->
+                                         <select name="cu" id="cu" class="form-control" onchange="get_customer_id($(this))">
+                                         <option value=""></option>
+                                            <?php
+                                            $data = $db->getallexamssel('customer_detail');
+                                            while($row = mysqli_fetch_array($data)){
+                                                $id = $row['id'];
+                                                $name = $row['name'];
+                                                echo "<option value='$id'>$name</option>";
+                                            } 
+                                            ?>
+                                            
+                                         </select>
                                     </div>
                                     <div class="mb-3 col-md-2">
                                         <label for=""><h5>Delivery Date</h5></label>
@@ -394,28 +409,28 @@
                                             </tr>
                                             <?php for ($i=0; $i < 3 ; $i++) { ?> 
                                             <tr id='tr#<?=$i;?>'>
-                                                <td><input type="text" class="form-control qty<?=$i;?>" placeholder='0'></td>
-                                                <td><input type="text" class="form-control desc<?=$i;?>"></td>
+                                                <td><input type="text" class="form-control qty<?=$i;?>" placeholder='0' name="qty[]"></td>
+                                                <td><input type="text" class="form-control desc<?=$i;?>" name="desc[]"></td>
                                                 <td>
-                                                    <select class='form-control w-50 float-left'>
-                                                        <option value="">Normal</option>
-                                                        <option value="">Fancy</option>
-                                                        <option value="">tuch</option>
+                                                    <select class='form-control w-50 float-left' name="button_type[]">
+                                                        <option value="Normal">Normal</option>
+                                                        <option value="Fancy">Fancy</option>
+                                                        <option value="tuch">tuch</option>
                                                     </select>
-                                                    <input type="text" placeholder='Rs.0' class="form-control w-50 float-right but<?=$i;?>">
+                                                    <input type="text" placeholder='Rs.0' class="form-control w-50 float-right but<?=$i;?>" name="button_num[]">
                                                 </td>
                                                 <td>
-                                                    <input type="text" placeholder='Rs.0' class="form-control sheling<?=$i;?>">
+                                                    <input type="text" placeholder='Rs.0' class="form-control sheling<?=$i;?>" name="sheling[]">
                                                 </td>
                                                 <td>
-                                                    <select class='form-control w-50 float-left'>
-                                                        <option value="">Sada</option>
-                                                        <option value="">Design</option>
+                                                    <select class='form-control w-50 float-left' name="design[]">
+                                                        <option value="Sada">Sada</option>
+                                                        <option value="Design">Design</option>
                                                     </select>
-                                                    <input type="text" placeholder='Rs.0' value='1500' class="form-control w-50 float-right sut<?=$i;?>">
+                                                    <input type="text" placeholder='Rs.0' value='1500' class="form-control w-50 float-right sut<?=$i;?>" name="suit[]">
                                                 </td>
                                                 <td>
-                                                    <input type="text" placeholder='Rs.0' disabled class="form-control speciaamount amt<?=$i;?>">
+                                                    <input type="text" placeholder='Rs.0' disabled class="form-control speciaamount amt<?=$i;?>" name="speciaamount[]">
                                                 </td>
                                             </tr>
                                             <?php }; ?> 
@@ -424,25 +439,25 @@
                                                 <td rowspan='4' colspan='3'></td>
                                                 <th colspan='2'>Total</th>
                                                 <td>
-                                                    <input type="text" placeholder='Rs.0' disabled class="form-control total ">
+                                                    <input type="text" placeholder='Rs.0' disabled class="form-control total " name="total">
                                                 </td>
                                             </tr>
                                             <tr id='t2#'>
                                                 <th colspan='2'>Discount</th>
                                                 <td> 
-                                                    <input type="text" placeholder='Rs.0' class="form-control dis">
+                                                    <input type="text" placeholder='Rs.0' class="form-control dis" name="dis">
                                                 </td>
                                             </tr>
                                             <tr id='t3#'>
                                                 <th colspan='2'>Advance</th>
                                                 <td> 
-                                                    <input type="text" placeholder='Rs.0' class="form-control adv">
+                                                    <input type="text" placeholder='Rs.0' class="form-control adv" name="adv">
                                                 </td>
                                             </tr>
                                             <tr id='t2#'>
                                                 <th colspan='2'>Balance</th>
                                                 <td>
-                                                    <input type="text" placeholder='Null' disabled class="form-control bal"> 
+                                                    <input type="text" placeholder='Null' disabled class="form-control bal" name="bal"> 
                                                 </td>
                                             </tr>
                                         </table>
@@ -450,7 +465,7 @@
                                 </div>
                                 
                                 <div>
-                                    <button type="submit" class="btn btn-primary waves-effect waves-light me-1 col-md-12" >
+                                    <button type="submit" class="btn btn-primary waves-effect waves-light me-1 col-md-12" id="form-submit">
                                         Submit Form
                                     </button>
                                 

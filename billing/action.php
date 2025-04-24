@@ -63,7 +63,8 @@ if($action == 'edit'){
     $urls   = md5("admin@".date('ymd-His'));
     
     $id = (isset($_POST['update'])) ? "And id != $_POST[update]" :'' ;
-    
+    // print_r($_POST);
+    // die();
     if(mysqli_num_rows($db->qu->query("select id from in_form where name='$name' $id"))>0){
         $msg = 'Batch name already in Record.';
         $json_data = array("status"=> 0,"msg" => $msg , 'icon'=>'warning');

@@ -44,16 +44,17 @@ $(document).ready(function() {
     
     $('#form-submit').submit(function(e){
         e.preventDefault(); 
-        const hidenumber = $('#phone');
-        if(!$(this).parsley().validate()){
-            return false;
-        }else if($('#hidephone').val() == 1 && $('#ehidephone').val() == 1){
-            hidenumber.focus();
-            return false;
-        }
+        // const hidenumber = $('#phone');
+        // if(!$(this).parsley().validate()){
+        //     return false;
+        // }else if($('#hidephone').val() == 1 && $('#ehidephone').val() == 1){
+        //     hidenumber.focus();
+        //     return false;
+        // }
         var data = $(this).serializeArray();
-        var formData = new FormData(this);
-        formData.append('insert' ,'');
+        data.push({name: 'action',value: 'insert'});
+        // var formData = new FormData(this);
+        // formData.append('insert' ,'');
         var returns = 1;
 
         if($('#form_action').val() != 'view'){
@@ -75,29 +76,28 @@ $(document).ready(function() {
                     if(t.isConfirmed == false){
                         return false 
                     }else{
-                        submit(formData)
+                        submit(data)
                     }
                 }
             )
         }else{
-            submit(formData)
+            submit(data)
         }
 
        
     })
 
     function submit(formData){
-        console.log('submit')
+        // console.log('submit')
+        // console.log(formData);
         var buttons = $('#form-submit').find('button')
         buttons.closest('div').append('<div class="spinner-border text-primary m-1" style="width: 30px;height: 30px;position: relative;top: 10px;" role="status"><span class="sr-only">Loading...</span></div>');
         buttons.attr('disabled','disabled');
 
         $.ajax({
             type: "POST",
-            url: "../../action.php",
+            url: "action.php",
             data: formData,
-            contentType: false, 
-            processData: false, 
             success: function (response) {
                 buttons.attr('disabled',false);
                 buttons.siblings('.spinner-border').remove();
@@ -148,6 +148,7 @@ $(document).ready(function() {
         });
     }
     
+   
 
   // Helper function to convert base64 to Blob
     function base64ToBlob(base64, mimeType) {
@@ -168,6 +169,16 @@ $(document).ready(function() {
     }
     
 });
+
+ // get customer id from dropdown
+
+ function get_customer_id(value){
+    // console.log($(value));
+    // $('#customer_id').val('');
+    var id = $(value).val();
+    $('#customer_id').val(id);
+    
+}
 
 
 function batchedit(id){

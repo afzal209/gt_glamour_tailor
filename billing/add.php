@@ -107,7 +107,7 @@
                                 "%s://%s%s",
                                 isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
                                 $_SERVER['HTTP_HOST'],
-                                "/form.php?XfsadrtTTSd2=".$row['url']
+                                "/gt_glamour_tailor/form.php?XfsadrtTTSd2=".$row['url']
                             );
                             $id = $row['id'];
                             echo "
